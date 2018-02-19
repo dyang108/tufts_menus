@@ -1,0 +1,30 @@
+{
+  "intents": [
+    {
+      "slots": [
+        {
+          "name": "Meal",
+          "type": "LIST_OF_MEALS"
+        },
+        {
+          "name": "Date",
+          "type": "AMAZON.DATE"
+        },
+        {
+          "name": "Hall",
+          "type": "LIST_OF_HALLS"
+        }
+      ],
+      "intent": "GetMenu"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}

@@ -54,6 +54,10 @@ function queryAPI (hall, date, mealname) {
       let Mealname = mealname.charAt(0).toUpperCase() + mealname.slice(1)
       res.on('end', () => {
         body = JSON.parse(body)
+        if (!body.data || !body.data[Mealname]) {
+          resolve(1)
+          return
+        }
         var meal = body.data[Mealname]
         for (var ckey in meal) {
           var category = meal[ckey]
@@ -97,7 +101,7 @@ function queryAPI (hall, date, mealname) {
 
 const handlers = {
   'LaunchRequest': function () {
-    this.emit(':tell', 'Welcome to Tufts Menus')
+    this.emit('AMAZON.HelpIntent')
   },
   'IntentRequest': function () {
     this.emit('GetMenu')
@@ -107,10 +111,31 @@ const handlers = {
   },
   'GetMenu': function () {
     let alexa = this
-    let meal = this.event.request.intent.slots.Meal.value
-    let hall = this.event.request.intent.slots.Hall.value.toLowerCase()
+
+    let meal
+    if (this.event.request.intent.slots.Meal && this.event.request.intent.slots.Meal.value) {
+      meal = this.event.request.intent.slots.Meal.value.toLowerCase()
+      if (meal !== 'breakfast' && meal !== 'lunch' && meal !== 'dinner') {
+        if (meal.includes('breakfast')) {
+          meal = 'breakfast'
+        } else if (meal.includes('lunch')) {
+          meal = 'lunch'
+        } else if (meal.includes('dinner')) {
+          meal = 'dinner'
+        }
+      }
+    } else {
+      this.emit('AMAZON.HelpIntent')
+    }
+
+    let hall
+    if (this.event.request.intent.slots.Hall && this.event.request.intent.slots.Hall.value) {
+      hall = this.event.request.intent.slots.Hall.value.toLowerCase()
+    } else {
+      this.emit('AMAZON.HelpIntent')
+    }
     let date
-    if (this.event.request.intent.slots.Date) {
+    if (this.event.request.intent.slots.Date && this.event.request.intent.slots.Date.value) {
       date = moment(this.event.request.intent.slots.Date.value).tz('America/New_York')
     } else {
       date = moment().tz('America/New_York')
@@ -120,9 +145,11 @@ const handlers = {
     queryAPI(hall, date, meal).then(menu => {
       let msg
       if (menu === 0) {
-        msg = 'Sorry, the menu you asked for is unavailable.'
+        msg = 'Sorry, the menu you asked for is currently unavailable, or ' + hall + ' does not have that meal.'
+      } else if (menu === 1) {
+        msg = 'Sorry, I didn\'t catch that. Please try again'
       } else {
-        msg = 'The menu for ' + hall + ' includes ' + menu
+        msg = 'The menu for ' + meal + ' at ' + hall + ' includes ' + menu
       }
       alexa.emit(':tell', msg)
     })
@@ -137,7 +164,7 @@ const handlers = {
     this.emit(':tell', 'Goodbye')
   },
   'Unhandled': function () {
-    this.emit(':ask', 'Sorry, I didn\'t get that.')
+    this.emit(':ask', 'Sorry, I\'m not sure what you just asked me. Can you try again?')
   }
 }
 

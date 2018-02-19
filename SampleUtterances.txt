@@ -1,0 +1,78 @@
+GetMenu what is for {Meal} at {Hall} on {Date}
+GetMenu what is for {Meal} at {Hall} {Date}
+GetMenu what is for {Meal} at {Hall}
+GetMenu what is for {Meal} on {Date} at {Hall}
+GetMenu what is for {Meal} {Date} at {Hall}
+GetMenu what is {Hall} serving for {Meal} on {Date}
+GetMenu what is {Hall} serving for {Meal} {Date}
+GetMenu what is {Hall} serving for {Meal}
+GetMenu what is the menu for {Meal} at {Hall} on {Date}
+GetMenu what is the menu for {Meal} at {Hall} {Date}
+GetMenu what is the menu for {Meal} at {Hall}
+GetMenu what is the menu for {Meal} on {Date} at {Hall}
+GetMenu what is the menu for {Meal} {Date} at {Hall}
+GetMenu what is on the menu for {Meal} at {Hall} on {Date}
+GetMenu what is on the menu for {Meal} at {Hall} {Date}
+GetMenu what is on the menu for {Meal} at {Hall}
+GetMenu what is on the menu at {Hall} for {Meal} on {Date}
+GetMenu what is on the menu at {Hall} for {Meal} {Date}
+GetMenu what is on the menu at {Hall} for {Meal}
+GetMenu what is on the menu for {Meal} on {Date} at {Hall}
+GetMenu what is on the menu for {Meal} {Date} at {Hall}
+GetMenu what is at {Hall} for {Meal} on {Date}
+GetMenu what is at {Hall} for {Meal} {Date}
+GetMenu what is at {Hall} for {Meal}
+GetMenu what does {Hall} have for {Meal} on {Date}
+GetMenu what does {Hall} have for {Meal} {Date}
+GetMenu what does {Hall} have for {Meal}
+GetMenu what's for {Meal} at {Hall} on {Date}
+GetMenu what's for {Meal} at {Hall} {Date}
+GetMenu what's for {Meal} at {Hall}
+GetMenu what's for {Meal} on {Date} at {Hall}
+GetMenu what's for {Meal} {Date} at {Hall}
+GetMenu what's {Hall} serving for {Meal} on {Date}
+GetMenu what's {Hall} serving for {Meal} {Date}
+GetMenu what's {Hall} serving for {Meal}
+GetMenu what's the menu for {Meal} at {Hall} on {Date}
+GetMenu what's the menu for {Meal} at {Hall} {Date}
+GetMenu what's the menu for {Meal} at {Hall}
+GetMenu what's the menu for {Meal} on {Date} at {Hall}
+GetMenu what's the menu for {Meal} {Date} at {Hall}
+GetMenu what's on the menu for {Meal} at {Hall} on {Date}
+GetMenu what's on the menu for {Meal} at {Hall} {Date}
+GetMenu what's on the menu for {Meal} at {Hall}
+GetMenu what's on the menu at {Hall} for {Meal} on {Date}
+GetMenu what's on the menu at {Hall} for {Meal} {Date}
+GetMenu what's on the menu at {Hall} for {Meal}
+GetMenu what's on the menu for {Meal} on {Date} at {Hall}
+GetMenu what's on the menu for {Meal} {Date} at {Hall}
+GetMenu what's at {Hall} for {Meal} on {Date}
+GetMenu what's at {Hall} for {Meal} {Date}
+GetMenu what's at {Hall} for {Meal}
+GetMenu what was for {Meal} at {Hall} on {Date}
+GetMenu what was for {Meal} at {Hall} {Date}
+GetMenu what was for {Meal} at {Hall}
+GetMenu what was for {Meal} on {Date} at {Hall}
+GetMenu what was for {Meal} {Date} at {Hall}
+GetMenu what was {Hall} serving for {Meal} on {Date}
+GetMenu what was {Hall} serving for {Meal} {Date}
+GetMenu what was {Hall} serving for {Meal}
+GetMenu what was the menu for {Meal} at {Hall} on {Date}
+GetMenu what was the menu for {Meal} at {Hall} {Date}
+GetMenu what was the menu for {Meal} at {Hall}
+GetMenu what was the menu for {Meal} on {Date} at {Hall}
+GetMenu what was the menu for {Meal} {Date} at {Hall}
+GetMenu what was on the menu for {Meal} at {Hall} on {Date}
+GetMenu what was on the menu for {Meal} at {Hall} {Date}
+GetMenu what was on the menu for {Meal} at {Hall}
+GetMenu what was on the menu at {Hall} for {Meal} on {Date}
+GetMenu what was on the menu at {Hall} for {Meal} {Date}
+GetMenu what was on the menu at {Hall} for {Meal}
+GetMenu what was on the menu for {Meal} on {Date} at {Hall}
+GetMenu what was on the menu for {Meal} {Date} at {Hall}
+GetMenu what was at {Hall} for {Meal} on {Date}
+GetMenu what was at {Hall} for {Meal} {Date}
+GetMenu what was at {Hall} for {Meal}
+GetMenu what did {Hall} have for {Meal} on {Date}
+GetMenu what did {Hall} have for {Meal} {Date}
+GetMenu what did {Hall} have for {Meal}
