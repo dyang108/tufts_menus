@@ -136,9 +136,9 @@ const handlers = {
     }
     let date
     if (this.event.request.intent.slots.Date && this.event.request.intent.slots.Date.value) {
-      date = moment(this.event.request.intent.slots.Date.value).tz('America/New_York')
+      date = moment(this.event.request.intent.slots.Date.value)
     } else {
-      date = moment().tz('America/New_York')
+      date = moment()
     }
 
     // Format output when get requests are done
